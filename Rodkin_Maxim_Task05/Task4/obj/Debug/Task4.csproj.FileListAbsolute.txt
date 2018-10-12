@@ -1,0 +1,7 @@
+D:\epam\course\Rodkin_Maxim_Task05\Task4\bin\Debug\Task4.exe.config
+D:\epam\course\Rodkin_Maxim_Task05\Task4\bin\Debug\Task4.exe
+D:\epam\course\Rodkin_Maxim_Task05\Task4\bin\Debug\Task4.pdb
+D:\epam\course\Rodkin_Maxim_Task05\Task4\obj\Debug\Task4.csprojResolveAssemblyReference.cache
+D:\epam\course\Rodkin_Maxim_Task05\Task4\obj\Debug\Task4.csproj.CoreCompileInputs.cache
+D:\epam\course\Rodkin_Maxim_Task05\Task4\obj\Debug\Task4.exe
+D:\epam\course\Rodkin_Maxim_Task05\Task4\obj\Debug\Task4.pdb
