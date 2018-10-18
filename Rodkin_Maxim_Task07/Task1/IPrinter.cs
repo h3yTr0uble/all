@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    class Figure
+    interface IPrinter
     {
-        public virtual void Draw(IPrinter p)
-        {
-            p.Print(this);
-        }
+        void Print(Figure f);
     }
 }

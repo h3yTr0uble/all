@@ -13,7 +13,7 @@ namespace Task1
             var line = new Line(0, 0, 1, 1);
             var circle = new Circle(0, 0, 4);
             var round = new Round(4, 4, 2);
-            var ring = new Ring(1, 1, 3, 8);
+            var ring = new Ring(1, 1, 8, 3);
             var rectangle = new Rectangle(1, 1, 5, 7);
             List<Figure> figures = new List<Figure>();
             figures.Add(line);
@@ -21,7 +21,9 @@ namespace Task1
             figures.Add(round);
             figures.Add(ring);
             figures.Add(rectangle);
-            Figure.DrawAll(figures);
+            Canvas canvas = new Canvas();
+            ConsolePrinter printer = new ConsolePrinter();
+            canvas.DrawAll(printer, figures);
             Console.ReadKey();
         }
     }

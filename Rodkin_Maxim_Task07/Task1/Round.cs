@@ -39,9 +39,6 @@ namespace Task1
             }
         }
 
-        public override void Draw()
-        {
-            Console.WriteLine($"Draw round with radius={Radius}");
-        }
+        
     }
 }

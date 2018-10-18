@@ -49,9 +49,6 @@ namespace Task1
             }
         }
 
-        public override void Draw()
-        {
-            Console.WriteLine($"Draw circle with radius={Radius}");
-        }
+       
     }
 }

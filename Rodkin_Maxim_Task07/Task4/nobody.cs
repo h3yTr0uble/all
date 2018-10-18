@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task1
+namespace Task4
 {
-    class Figure
+    class Nobody
     {
-        public virtual void Draw(IPrinter p)
-        {
-            p.Print(this);
-        }
+        public int X { get; set; }
+        public int Y { get; set; }
     }
 }

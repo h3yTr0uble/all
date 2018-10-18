@@ -82,9 +82,6 @@ namespace Task1
             }
         }
 
-        public override void Draw()
-        {
-            Console.WriteLine($"Draw rectangle with width={width} and inner height={height}");
-        }
+       
     }
 }

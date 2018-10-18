@@ -42,8 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apple.cs" />
+    <Compile Include="Blocks.cs" />
+    <Compile Include="Coins.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="IMovable.cs" />
+    <Compile Include="SizeOfPlayground.cs" />
+    <Compile Include="Monsters.cs" />
+    <Compile Include="Nobody.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tree.cs" />
+    <Compile Include="Wolf.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

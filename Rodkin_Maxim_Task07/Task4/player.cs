@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task1
+namespace Task4
 {
-    class Figure
+    class Player:Nobody,IMovable
     {
-        public virtual void Draw(IPrinter p)
+        public void Move()
         {
-            p.Print(this);
+            //изменение координат
         }
     }
 }

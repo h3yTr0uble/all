@@ -21,9 +21,6 @@ namespace Task1
             Y2 = y2;
         }
 
-        public override void Draw()
-        {
-            Console.WriteLine($"Draw Line from {X1},{Y1} to {X2},{Y2}");
-        }
+       
     }
 }

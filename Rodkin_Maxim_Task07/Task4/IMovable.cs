@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task1
+namespace Task4
 {
-    class Figure
+    interface IMovable
     {
-        public virtual void Draw(IPrinter p)
-        {
-            p.Print(this);
-        }
+        void Move();
     }
 }
