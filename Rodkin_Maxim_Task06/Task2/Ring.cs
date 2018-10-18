@@ -2,52 +2,48 @@
 
 namespace Task2
 {
-    class Ring:Round
+    class Ring
     {
-        private double innerRadius;
-        public double InnerRadius
+        private Round innerRound;
+        private Round outerRound;
+
+        public Ring(int x, int y, double radius, double innerRadius)
+        {
+            innerRound.X = x;
+            innerRound.Y = y;
+            innerRound.Radius = innerRadius;
+            outerRound.Radius = radius;
+        }
+
+        public int X
         {
             get
             {
-                return innerRadius;
-            }
-
-            set
-            {
-                if (value > 0)
-                {
-                    innerRadius = value;
-                    if (Radius<innerRadius)
-                    {
-                        innerRadius = Radius;
-                        Radius = value;
-                    }
-                }
-                else
-                {
-                    throw new Exception("Incorrect radius");
-                }
+                return innerRound.X;
             }
         }
 
-        public Ring(int x, int y, double radius, double innerRadius):base(x, y, radius)
-        {
-            InnerRadius = innerRadius;
-        }
-
-        public Ring(int x, int y):base(x, y)
-        {
-            innerRadius = 2;
-        }
-
-        public Ring():this(0,0)
-        { }
-
-        public new double Area
+        public int Y
         {
             get
             {
-                return Math.PI * Math.Pow(Radius, 2) - Math.PI * Math.Pow(innerRadius, 2);
+                return innerRound.Y;
+            }
+        }
+
+        public double OuterLingth
+        {
+            get
+            {
+                return outerRound.Length;
+            }
+        }
+
+        public double Area
+        {
+            get
+            {
+                return Math.PI * Math.Pow(outerRound.Radius, 2) - Math.PI * Math.Pow(innerRound.Radius, 2);
             }
         }
 
@@ -55,8 +51,9 @@ namespace Task2
         {
             get
             {
-                return Math.PI * 2 * innerRadius;
+                return Math.PI * 2 * innerRound.Radius;
             }
         }
+       
     }
 }

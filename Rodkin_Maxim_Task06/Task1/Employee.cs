@@ -8,18 +8,7 @@ namespace Task1
 {
     class Employee:User
     {
-        private DateTime employmentDate;
-        public DateTime EmploymentDate
-        {
-            get
-            {
-                return employmentDate;
-            }
-            private set
-            {
-                employmentDate = value;
-            }
-        }
+        public DateTime EmploymentDate { get; private set; }
         private string post;
 
         public string Post
@@ -45,7 +34,7 @@ namespace Task1
         {
             get
             {
-                var days = DateTime.Now - employmentDate;
+                var days = DateTime.Now - EmploymentDate;
                 return days.Days / 365;
             }
             private set
