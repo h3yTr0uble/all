@@ -11,17 +11,17 @@ namespace Task1
         static void Main(string[] args)
         {
             DynamicArray<int> test1 = new DynamicArray<int>();
-            for (int i = 0; i < 5; i++)
+            for (int i = 1; i < 5; i++)
             {
                 test1.Add(i);
             }
-            for (int i = 0; i < test1.Capacity; i++)
+            for (int i = 0; i < test1.Length; i++)
             {
                 Console.WriteLine(test1[i]);
             }
             Console.WriteLine();
-            test1.Insert(8, 3);
-            for (int i = 0; i < test1.Capacity; i++)
+            test1.Insert(8, test1.Length);
+            for (int i = 0; i < test1.Length; i++)
             {
                 Console.WriteLine(test1[i]);
             }

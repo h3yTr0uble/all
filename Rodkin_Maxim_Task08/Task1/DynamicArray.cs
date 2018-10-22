@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task1
 {
-    class DynamicArray<T> where T: IComparable<T>, new()
+    class DynamicArray<T> where T: new()
     {
         private T[] array;
         public int Length { get; private set; }
@@ -36,26 +32,20 @@ namespace Task1
 
         public void Add(T item)
         {
-            if (Capacity <= Length)
-            {
-                Array.Resize(ref array, Capacity * 2);
-            }
-
-            array[Length] = item;
-            Length++;
+            Insert(item, Length);
         }
 
         public void AddRange(T[] inputArray)
         {
             if (inputArray.Length > Capacity-Length)
             {
-                int range = array.Length;
+                int newSize = array.Length;
                 do
                 {
-                    range *= 2;
-                } while (inputArray.Length > range - Length);
+                    newSize *= 2;
+                } while (inputArray.Length > newSize - Length);
 
-                Array.Resize(ref array, range);
+                Array.Resize(ref array, newSize);
             }
             for (int i = 0; i < inputArray.Length; i++)
             {
@@ -65,35 +55,31 @@ namespace Task1
 
         public bool Remove(T item)
         {
-            for (int i = 0; i < Length; i++)
+
+            var itemIndex = Array.IndexOf(array, item);
+            if (itemIndex != -1)
             {
-                if (array[i].CompareTo(item)==0)
-                {
-                    for (int j = i; j < Length-1; j++)
-                    {
-                        array[j] = array[j + 1];
-                    }
-                    array[Length-1] = default(T);
-                    Length--;
-                    break;
-                }
+                Array.Copy(array, itemIndex + 1, array, itemIndex, Length - itemIndex);
+                Length--;
+                return true;
             }
-            return true;
+            else
+            {
+                return false;
+            }
+
         }
 
-        public bool Insert(T item, int id)
+        public bool Insert(T item, int index)
         {
-            if (id <= Length)
+            if (index <= Length && index>=0)
             {
                 if (Capacity <= Length)
                 {
                     Array.Resize(ref array, Capacity * 2);
                 }
-                for (int i = Length; i > id; i--)
-                {
-                    array[i] = array[i - 1];
-                }
-                array[id] = item;
+                Array.Copy(array, index, array, index+1, Length - index);
+                array[index] = item;
                 Length++;
                 return true;
             }
@@ -111,7 +97,7 @@ namespace Task1
 
             get
             {
-                if (index >= Capacity)
+                if (index >= Length || index<0)
                 {
                     throw new ArgumentOutOfRangeException();
                 }
@@ -119,7 +105,7 @@ namespace Task1
             }
             set
             {
-                if (index >= Capacity)
+                if (index >= Length || index < 0)
                 {
                     throw new ArgumentOutOfRangeException();
                 }
