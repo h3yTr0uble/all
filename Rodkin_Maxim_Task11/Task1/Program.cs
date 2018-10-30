@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Task1Library;
+
+
+namespace Task1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var x = MathLibrary.Pow(3, 3);
+            var y = MathLibrary.Fact(5);
+        }
+    }
+}

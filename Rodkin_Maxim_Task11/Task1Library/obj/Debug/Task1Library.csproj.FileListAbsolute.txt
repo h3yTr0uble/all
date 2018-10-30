@@ -1,0 +1,5 @@
+D:\epam\course\Rodkin_Maxim_Task11\Task1Library\bin\Debug\Task1Library.dll
+D:\epam\course\Rodkin_Maxim_Task11\Task1Library\bin\Debug\Task1Library.pdb
+D:\epam\course\Rodkin_Maxim_Task11\Task1Library\obj\Debug\Task1Library.csproj.CoreCompileInputs.cache
+D:\epam\course\Rodkin_Maxim_Task11\Task1Library\obj\Debug\Task1Library.dll
+D:\epam\course\Rodkin_Maxim_Task11\Task1Library\obj\Debug\Task1Library.pdb
