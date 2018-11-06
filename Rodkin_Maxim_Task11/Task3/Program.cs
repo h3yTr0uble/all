@@ -10,35 +10,27 @@ namespace Task3
     {
         static void Main(string[] args)
         {
-            TwoDPoint point1 = new TwoDPoint(1, 10);
-            TwoDPoint point2 = new TwoDPoint(1, 10);
-
-            Console.WriteLine("Hash for point1: {0}\tHash for point2: {1}", point1.GetHashCode(), point2.GetHashCode());
-
-            TwoDPointWithHash newPoint1 = new TwoDPointWithHash(1, 1);
-            TwoDPointWithHash newPoint2 = new TwoDPointWithHash(10, 10);
-
-            Console.WriteLine("Hash for point1: {0}\tHash for point2: {1}", newPoint1.GetHashCode(), newPoint2.GetHashCode());
-
-            // уникальных точек будет 2, хотя координаты их одинаковы
-            Console.WriteLine("TwoDPointWithHash:");
-
-            var twoDPointList = new List<TwoDPoint> { point1, point2 };
-            var distinctTwoDPointList = twoDPointList.Distinct();
-            foreach (var point in distinctTwoDPointList)
+            var twoDPointWithHashList = new List<TwoDPointWithHash>();
+            for (int i = -5000000; i < 5000000; i++)
             {
-                Console.WriteLine("Distinct point: {0}", point);
+                twoDPointWithHashList.Add(new TwoDPointWithHash(i, i + 1000000));
             }
-
-            // одна уникальная точка
-            Console.WriteLine("TwoDPointWithHash:");
-
-            var twoDPointWithHashList = new List<TwoDPointWithHash> { newPoint1, newPoint2 };
+         //   Console.WriteLine("Hash for point1: {0}\tHash for point2: {1}", newPoint1.GetHashCode(), newPoint2.GetHashCode());
+          //  var twoDPointWithHashList = new List<TwoDPointWithHash> { newPoint1, newPoint2 };
+            List<int> hashList = new List<int>();
+            foreach (var point in twoDPointWithHashList)
+            {
+                hashList.Add(point.GetHashCode());
+            }
             var distinctTwoDPointWithHashList = twoDPointWithHashList.Distinct();
-            foreach (var point in distinctTwoDPointWithHashList)
-            {
-                Console.WriteLine("Distinct point: {0}", point);
-            }
+            var distinctHashList = hashList.Distinct();
+            //    Console.WriteLine(distinctHashList.Count());
+            //       Console.WriteLine(distinctTwoDPointWithHashList.Count());
+
+            double countHash = distinctHashList.Count();
+            double countPoints = distinctTwoDPointWithHashList.Count();
+            Console.WriteLine($"Коллизия: {100-countHash / countPoints*100}%");
+
             Console.ReadKey();
         }
     }

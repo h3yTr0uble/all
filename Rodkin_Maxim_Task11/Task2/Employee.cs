@@ -73,9 +73,16 @@ namespace Task2
 
         public bool Equals(Employee otherEmployee)
         {
-            if (this.GetHashCode() == otherEmployee.GetHashCode())
+            if (otherEmployee!=null)
             {
-                return true;
+                if (this.GetHashCode() == otherEmployee.GetHashCode())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
