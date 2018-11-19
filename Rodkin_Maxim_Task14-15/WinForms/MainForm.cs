@@ -38,7 +38,10 @@ namespace WinForms
 		private void MainForm_Load(object sender, EventArgs e)
 		{
             ctlAwards.DataSource = awards.InitList();
+            ctlUsers.AutoGenerateColumns = false;
+
             ctlUsers.DataSource = users.InitList();
+            ctlAwards.AutoGenerateColumns = false;
         }
 
      
@@ -48,8 +51,6 @@ namespace WinForms
 			// Data binding
 			ctlUsers.DataSource = null;
 			ctlUsers.DataSource = users.GetList();
-            ctlUsers.Columns[0].Visible = false;
-          //  ctlAwards.Columns["UserAwards"].Width = 200;
         }
 
         private void DisplayAwards()
@@ -57,9 +58,6 @@ namespace WinForms
             // Data binding
             ctlAwards.DataSource = null;
             ctlAwards.DataSource = awards.GetList();
-            ctlAwards.Columns[0].Visible = false;
-            ctlAwards.Columns[1].Width = 200;
-            ctlAwards.Columns[2].Width = 300;
         }
 
         private void Users_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -201,7 +199,6 @@ namespace WinForms
                 ctlUsers.DataSource = SortUsersDesc;
                 userSortMode = SortMode.Asceding;
             }
-            ctlUsers.Columns[0].Visible = false;
         }
 
 
@@ -239,9 +236,6 @@ namespace WinForms
                     ctlAwards.DataSource = awards.SortAwardsByTitleDesc();
                     awardSortMode = SortMode.Asceding;
                 }
-                ctlAwards.Columns[0].Visible = false;
-                ctlAwards.Columns[1].Width = 200;
-                ctlAwards.Columns[2].Width = 300;
             }
         }
 

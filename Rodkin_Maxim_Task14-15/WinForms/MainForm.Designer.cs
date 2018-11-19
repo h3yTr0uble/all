@@ -81,7 +81,7 @@
             this.ctlFile});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(658, 28);
+            this.mainMenu.Size = new System.Drawing.Size(758, 28);
             this.mainMenu.TabIndex = 0;
             // 
             // ctlFile
@@ -216,7 +216,7 @@
             this.ctlTab.Location = new System.Drawing.Point(0, 28);
             this.ctlTab.Name = "ctlTab";
             this.ctlTab.SelectedIndex = 0;
-            this.ctlTab.Size = new System.Drawing.Size(658, 293);
+            this.ctlTab.Size = new System.Drawing.Size(758, 293);
             this.ctlTab.TabIndex = 5;
             // 
             // ctlStudentPage
@@ -225,7 +225,7 @@
             this.ctlStudentPage.Location = new System.Drawing.Point(4, 26);
             this.ctlStudentPage.Name = "ctlStudentPage";
             this.ctlStudentPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ctlStudentPage.Size = new System.Drawing.Size(650, 263);
+            this.ctlStudentPage.Size = new System.Drawing.Size(750, 263);
             this.ctlStudentPage.TabIndex = 0;
             this.ctlStudentPage.Text = "Пользователи";
             this.ctlStudentPage.UseVisualStyleBackColor = true;
@@ -245,7 +245,7 @@
             this.ctlUsers.Location = new System.Drawing.Point(3, 3);
             this.ctlUsers.Name = "ctlUsers";
             this.ctlUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ctlUsers.Size = new System.Drawing.Size(644, 257);
+            this.ctlUsers.Size = new System.Drawing.Size(744, 257);
             this.ctlUsers.TabIndex = 3;
             this.ctlUsers.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ctlUsers_ColumnHeaderMouseClick);
             // 
@@ -255,7 +255,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(580, 263);
+            this.tabPage2.Size = new System.Drawing.Size(650, 263);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Награды";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -273,7 +273,7 @@
             this.ctlAwards.Name = "ctlAwards";
             this.ctlAwards.ReadOnly = true;
             this.ctlAwards.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ctlAwards.Size = new System.Drawing.Size(574, 257);
+            this.ctlAwards.Size = new System.Drawing.Size(644, 257);
             this.ctlAwards.TabIndex = 4;
             this.ctlAwards.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ctlAwards_ColumnHeaderMouseClick);
             // 
@@ -343,14 +343,14 @@
             // FirstName
             // 
             this.FirstName.DataPropertyName = "FirstName";
-            this.FirstName.HeaderText = "FirstName";
+            this.FirstName.HeaderText = "First Name";
             this.FirstName.Name = "FirstName";
             this.FirstName.ReadOnly = true;
             // 
             // LastName
             // 
             this.LastName.DataPropertyName = "LastName";
-            this.LastName.HeaderText = "LastName";
+            this.LastName.HeaderText = "Last Name";
             this.LastName.Name = "LastName";
             this.LastName.ReadOnly = true;
             // 
@@ -371,15 +371,16 @@
             // UserAwards
             // 
             this.UserAwards.DataPropertyName = "AwardsStr";
-            this.UserAwards.HeaderText = "UserAwards";
+            this.UserAwards.HeaderText = "User Awards";
             this.UserAwards.Name = "UserAwards";
             this.UserAwards.ReadOnly = true;
+            this.UserAwards.Width = 300;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 377);
+            this.ClientSize = new System.Drawing.Size(758, 366);
             this.Controls.Add(this.ctlTab);
             this.Controls.Add(this.mainMenu);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
