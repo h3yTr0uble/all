@@ -1,0 +1,10 @@
+﻿using System;
+namespace Department.DAL
+{
+	public interface IUserDAO
+	{
+		void Add(Entities.User user);
+        void Remove(Entities.User user);
+        System.Collections.Generic.IEnumerable<Entities.User> GetList();
+	}
+}
